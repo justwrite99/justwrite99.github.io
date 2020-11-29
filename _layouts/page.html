@@ -1,21 +1,24 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html>
 
-    <div class="wrapper">
-      <div class="content">
-        <div class="container container-center">
-          <div class="row">
-            <div class="col-md-8 offset-md-1">
-              <div class="card">
-                {{ content }}
-              </div>
-            </div>
-            <div class="col-md-3 hidden-xs">
-              {% include sidebar.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% include footer.html %}
-    </div>
-  </body>
+{% include head.html %}
+
+<body>
+  <div class="content">
+
+    {% include header.html %}
+
+    {% include mobile_menu.html %}
+    
+    <main class="main">
+
+    {{ content }}
+
+    </main>
+
+  </div>
+
+  {% include footer.html %}
+  {% include js.html %}
+</body>
 </html>
