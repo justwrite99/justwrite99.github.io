@@ -2,29 +2,32 @@
 
 <script>
     const themePreference = () => {
-        const hasLocalStorage = localStorage.getItem('theme');
-        let supports = false;
-        let theme = undefined;
+        // const hasLocalStorage = localStorage.getItem('theme');
+        // let supports = false;
+        // let theme = undefined;
 
-        if (hasLocalStorage === 'light') {
-            theme = 'light';
-        }
-        if (hasLocalStorage === 'dark') {
-            theme = 'dark';
-        }
+        // if (hasLocalStorage === 'light') {
+        //     theme = 'light';
+        // }
+        // if (hasLocalStorage === 'dark') {
+        //     theme = 'dark';
+        // }
 
-        if (window.matchMedia(`(prefers_color: dark)`).matches) {
-            theme = hasLocalStorage ? hasLocalStorage : 'dark';
-            supports = true;
-        };
-        if (window.matchMedia(`(prefers_color: light)`).matches) {
-            theme = hasLocalStorage ? hasLocalStorage : 'light';
-            supports = true;
-        };
-        if (window.matchMedia(`(prefers_color: no-preference)`).matches) {
-            theme = hasLocalStorage ? hasLocalStorage : 'none';
-            supports = true;
-        };
+        // if (window.matchMedia(`(prefers_color: dark)`).matches) {
+        //     theme = hasLocalStorage ? hasLocalStorage : 'dark';
+        //     supports = true;
+        // };
+        // if (window.matchMedia(`(prefers_color: light)`).matches) {
+        //     theme = hasLocalStorage ? hasLocalStorage : 'light';
+        //     supports = true;
+        // };
+        // if (window.matchMedia(`(prefers_color: no-preference)`).matches) {
+        //     theme = hasLocalStorage ? hasLocalStorage : 'none';
+        //     supports = true;
+        // };
+
+        let supports = true;
+        let theme = 'dark';
 
         return {
             supports,
