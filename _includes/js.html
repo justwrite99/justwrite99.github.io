@@ -39,18 +39,18 @@
         console.clear();
 
         const userThemePreference = themePreference();
-        const toggle = document.querySelector('[theme_toggle]');
+        // const toggle = document.querySelector('[theme_toggle]');
         const html = document.documentElement;
 
         const setTheme = () => {
             switch (userThemePreference.theme) {
                 case 'dark':
-                    toggle.checked = true;
+                    // toggle.checked = true;
                     html.classList.add('dark');
                     html.classList.remove('light');
                     break;
                 case 'light':
-                    toggle.checked = false;
+                    // toggle.checked = false;
                     html.classList.remove('dark');
                     html.classList.add('light');
                     break;
