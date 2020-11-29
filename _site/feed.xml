@@ -3,18 +3,18 @@
   <channel>
     <title>JustWrite</title>
     <description>평범한 개발자의 평범한 개발 이야기</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2020 04:12:13 +0900</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2020 04:12:13 +0900</lastBuildDate>
+    <link>https://justwrite99.github.io/</link>
+    <atom:link href="https://justwrite99.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 30 Nov 2020 04:12:30 +0900</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2020 04:12:30 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
         <title>평범하지만 어려운 것들에 대해서</title>
         <description></description>
         <pubDate>Mon, 30 Nov 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2020-11/log01</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-11/log01</guid>
+        <link>https://justwrite99.github.io/2020-11/log01</link>
+        <guid isPermaLink="true">https://justwrite99.github.io/2020-11/log01</guid>
         
         
         <category>log</category>
