@@ -5,9 +5,24 @@
     <description>평범한 개발자의 평범한 개발 이야기</description>
     <link>https://justwrite99.github.io/</link>
     <atom:link href="https://justwrite99.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Dec 2020 17:10:00 +0900</pubDate>
-    <lastBuildDate>Thu, 03 Dec 2020 17:10:00 +0900</lastBuildDate>
+    <pubDate>Thu, 03 Dec 2020 17:15:11 +0900</pubDate>
+    <lastBuildDate>Thu, 03 Dec 2020 17:15:11 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>레거시 코드 리팩토링 하기</title>
+        <description>
+</description>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
+        <link>https://justwrite99.github.io/2020-12/refactoring-legacy-code</link>
+        <guid isPermaLink="true">https://justwrite99.github.io/2020-12/refactoring-legacy-code</guid>
+        
+        
+        <category>refactoring</category>
+        
+        <category>modular</category>
+        
+      </item>
     
       <item>
         <title>조금씩 쌓아가기, 인생도 개발도</title>
