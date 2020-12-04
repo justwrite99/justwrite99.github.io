@@ -3,11 +3,25 @@
   <channel>
     <title>JustWrite</title>
     <description>평범한 개발자의 평범한 개발 이야기</description>
-    <link>https://justwrite99.github.io/</link>
-    <atom:link href="https://justwrite99.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Dec 2020 08:06:00 +0900</pubDate>
-    <lastBuildDate>Thu, 03 Dec 2020 08:06:00 +0900</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 03 Dec 2020 10:56:08 +0900</pubDate>
+    <lastBuildDate>Thu, 03 Dec 2020 10:56:08 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>레거시 코드 개선하기</title>
+        <description>&lt;p&gt;개발 초기부터 관여하지 않은 모듈을 유지보수하는 일은 쉽지 않습니다. 특히 전체적으로 코드의 의도가 잘 드러나지 않는 모듈을 유지보수하는 일은 더욱이 깊은 빡침을 불러일으킵니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2020-12/refactor-legacy-code</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-12/refactor-legacy-code</guid>
+        
+        
+        <category>refactoring</category>
+        
+      </item>
     
       <item>
         <title>조금씩 쌓아가기, 인생도 개발도</title>
@@ -53,8 +67,8 @@
 &lt;p&gt;인생도 개발도 말이죠.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2020 00:00:00 +0900</pubDate>
-        <link>https://justwrite99.github.io/2020-11/log01</link>
-        <guid isPermaLink="true">https://justwrite99.github.io/2020-11/log01</guid>
+        <link>http://localhost:4000/2020-11/log01</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-11/log01</guid>
         
         
         <category>daily log</category>
