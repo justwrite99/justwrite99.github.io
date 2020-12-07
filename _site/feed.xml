@@ -5,13 +5,13 @@
     <description>평범한 개발자의 평범한 개발 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Dec 2020 10:56:08 +0900</pubDate>
-    <lastBuildDate>Thu, 03 Dec 2020 10:56:08 +0900</lastBuildDate>
+    <pubDate>Mon, 07 Dec 2020 07:23:29 +0900</pubDate>
+    <lastBuildDate>Mon, 07 Dec 2020 07:23:29 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
         <title>레거시 코드 개선하기</title>
-        <description>&lt;p&gt;개발 초기부터 관여하지 않은 모듈을 유지보수하는 일은 쉽지 않습니다. 특히 전체적으로 코드의 의도가 잘 드러나지 않는 모듈을 유지보수하는 일은 더욱이 깊은 빡침을 불러일으킵니다.&lt;/p&gt;
+        <description>&lt;p&gt;개발 초기부터 관여하지 않은 모듈을 유지보수하는 일은 쉽지 않습니다. 특히 전체적으로 코드의 의도가 잘 드러나지 않는 모듈을 유지보수하는 일은 깊은 빡침을 불러일으킵니다. 그래서 최소의 노력으로 유지보수하기 위해 노력합니다. 다만 이런 형태의 유지보수는 시간이 흐르면 흐를수록 개발은 재미없어지고 일은 일대로 고닲집니다. 나빠지가만 하는 코드를 개서나지 않는 것은 배움의 기회를 놓치는 것이기도 합니다.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
