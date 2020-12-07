@@ -3,10 +3,10 @@
   <channel>
     <title>JustWrite</title>
     <description>평범한 개발자의 평범한 개발 이야기</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Dec 2020 07:23:29 +0900</pubDate>
-    <lastBuildDate>Mon, 07 Dec 2020 07:23:29 +0900</lastBuildDate>
+    <link>https://justwrite99.github.io/</link>
+    <atom:link href="https://justwrite99.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 07 Dec 2020 16:17:20 +0900</pubDate>
+    <lastBuildDate>Mon, 07 Dec 2020 16:17:20 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -15,8 +15,8 @@
 
 </description>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2020-12/refactor-legacy-code</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-12/refactor-legacy-code</guid>
+        <link>https://justwrite99.github.io/2020-12/refactor-legacy-code</link>
+        <guid isPermaLink="true">https://justwrite99.github.io/2020-12/refactor-legacy-code</guid>
         
         
         <category>refactoring</category>
@@ -67,8 +67,8 @@
 &lt;p&gt;인생도 개발도 말이죠.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2020-11/log01</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-11/log01</guid>
+        <link>https://justwrite99.github.io/2020-11/log01</link>
+        <guid isPermaLink="true">https://justwrite99.github.io/2020-11/log01</guid>
         
         
         <category>daily log</category>
