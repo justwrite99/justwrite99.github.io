@@ -43,9 +43,9 @@ comments: true
             - required interfaces
             - feature1
 
-`app/feature1` 코드를 `submodule_feature1`으로 이동합니다. 이때 `submodule_feature1`이 필요로하는 모든 외부 기능에 대한 추상화를 하고 관련된 모든 인터페이스는 `required interfaces`에 추가합니다. 그리고 `submodule_fature1`은 `required interfaces`를 통해 외부 모듀에 대한 의존성이 전혀 없는 상태가 됩니다. 
+`app/feature1` 모듈의 코드를 `submodule_feature1` 모듈로 이동합니다. 이때 `submodule_feature1` 모듈이 필요로하는 모든 외부 기능에 대한 추상화를 하고 관련된 모든 인터페이스는 `required interfaces`에 추가합니다. 그리고 `submodule_fature1` 모듈은 `required interfaces`를 통해 외부 모듀에 대한 의존성이 전혀 없는 상태가 됩니다.
 
-그리고, `app` 모듈은 `submodule_feature1`의 `required interfaces`를 구현합니다. 사용자 요청에 따라 `submodule_feature1`이 러칭기 전에 `app`모듈은 `feature1_injector`를 통해 `submodule_feature1`이 필요로 하는 외부 기능과 연관된 객체를 생성해 주입합니다.
+그리고, `app` 모듈은 `submodule_feature1` 모듈의 `required interfaces`를 구현합니다. 사용자 요청에 따라 `submodule_feature1` 모듈의 Entry Page를 런칭하기 전에 `app` 모듈은 `feature1_injector`를 통해 `submodule_feature1` 모듈이 필요로 하는 외부 기능과 연관된 객체를 생성해 주입합니다.
 
 중요한 부분은 기존에 없던 `required interfaces`를 정의했다는 것입니다. 이 부분을 통해 `submodule_feature1` 모듈은 외부에 대한 의존성이 전혀 없는 상황이 만들어 집니다. 그리고 이런 인터페이스를 통해 `submodule_feature1` 모듈은 이전과 다른 수준의 Testabiltiy를 확보할 수 있습니다.
 
