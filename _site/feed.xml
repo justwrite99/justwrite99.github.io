@@ -5,8 +5,8 @@
     <description>평범한 개발자의 평범한 개발 이야기</description>
     <link>https://justwrite99.github.io/</link>
     <atom:link href="https://justwrite99.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Dec 2020 04:32:01 +0900</pubDate>
-    <lastBuildDate>Wed, 09 Dec 2020 04:32:01 +0900</lastBuildDate>
+    <pubDate>Fri, 11 Dec 2020 12:45:11 +0900</pubDate>
+    <lastBuildDate>Fri, 11 Dec 2020 12:45:11 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -74,8 +74,53 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;to be continued…&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/feature1&lt;/code&gt; 코드를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt;으로 이동합니다. 이때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt;이 필요로하는 모든 외부 기능에 대한 추상화를 하고 관련된 모든 인터페이스는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;required interfaces&lt;/code&gt;에 추가합니다. 그리고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_fature1&lt;/code&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;required interfaces&lt;/code&gt;를 통해 외부 모듀에 대한 의존성이 전혀 없는 상태가 됩니다.&lt;/p&gt;
 
+&lt;p&gt;그리고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt; 모듈은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;required interfaces&lt;/code&gt;를 구현합니다. 사용자 요청에 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt;이 러칭기 전에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt;모듈은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature1_injector&lt;/code&gt;를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt;이 필요로 하는 외부 기능과 연관된 객체를 생성해 주입합니다.&lt;/p&gt;
+
+&lt;p&gt;중요한 부분은 기존에 없던 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;required interfaces&lt;/code&gt;를 정의했다는 것입니다. 이 부분을 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt; 모듈은 외부에 대한 의존성이 전혀 없는 상황이 만들어 집니다. 그리고 이런 인터페이스를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodule_feature1&lt;/code&gt; 모듈은 이전과 다른 수준의 Testabiltiy를 확보할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;required interfaces&lt;/code&gt; 모듈이 정의하는 인터페이스를 사용해 Mock Object를 만들면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submodlue_feature1&lt;/code&gt; 모듈의 전체 기능을 테스트할 수 있습니다. 여전히 유닛 테스팅은 불가능 하지만 SW 시스템 전체에 대해 매뉴얼 테스트 밖에 할 수 없는 상황보다는 진일보한 것이라고 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이전 그림과 크게 달라진 부분은 없지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;submoule_feature1&lt;/code&gt; 모듈은 피처(feature) 수준의 테스트 코드를 확보해 독자적인 검증 과정을 거칠수 있게 됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AndroidTVFrontend
+    &lt;ul&gt;
+      &lt;li&gt;app (legacy code)
+        &lt;ul&gt;
+          &lt;li&gt;main
+            &lt;ul&gt;
+              &lt;li&gt;feature1_entry
+                &lt;ul&gt;
+                  &lt;li&gt;feature1_injector&lt;/li&gt;
+                  &lt;li&gt;imps of required interfaces&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;feature2&lt;/li&gt;
+          &lt;li&gt;featureN&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;features
+        &lt;ul&gt;
+          &lt;li&gt;submodule_feature1
+            &lt;ul&gt;
+              &lt;li&gt;required interfaces&lt;/li&gt;
+              &lt;li&gt;feature1&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;&lt;em&gt;test&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;동일한 방법을 다른 피처에도 적용하여 서브 모듈화를 진행할 수 있습니다. 그리고, 각 서브 모듈은 테스트 코드를 통해 자체적으로 검증할 수 있는 수단을 마련합니다. 그리고 이런 검증 수단을 기반으로 각 피처 모듈은 알아서 코드르 개선하던 검증을 좀 더 강화하기 위한 테스트 코드를 개발하던 알아서 개선을 진행하면 됩니다. 모든 것이 뭉쳐있던 이 전과는 다르게 피처간의 의존성은 전혀 없습니다.&lt;/p&gt;
+
+&lt;p&gt;서로 방이 다르니 방을 어지럽히던 깨끗하게 하던 방 주인이 알아서 하는 겁니다.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
         <link>https://justwrite99.github.io/2020-12/refactor-legacy-code</link>

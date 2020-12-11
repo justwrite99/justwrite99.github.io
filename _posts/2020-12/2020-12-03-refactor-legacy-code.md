@@ -43,6 +43,30 @@ comments: true
             - required interfaces
             - feature1
 
-to be continued...
+`app/feature1` 코드를 `submodule_feature1`으로 이동합니다. 이때 `submodule_feature1`이 필요로하는 모든 외부 기능에 대한 추상화를 하고 관련된 모든 인터페이스는 `required interfaces`에 추가합니다. 그리고 `submodule_fature1`은 `required interfaces`를 통해 외부 모듀에 대한 의존성이 전혀 없는 상태가 됩니다. 
 
+그리고, `app` 모듈은 `submodule_feature1`의 `required interfaces`를 구현합니다. 사용자 요청에 따라 `submodule_feature1`이 러칭기 전에 `app`모듈은 `feature1_injector`를 통해 `submodule_feature1`이 필요로 하는 외부 기능과 연관된 객체를 생성해 주입합니다.
 
+중요한 부분은 기존에 없던 `required interfaces`를 정의했다는 것입니다. 이 부분을 통해 `submodule_feature1` 모듈은 외부에 대한 의존성이 전혀 없는 상황이 만들어 집니다. 그리고 이런 인터페이스를 통해 `submodule_feature1` 모듈은 이전과 다른 수준의 Testabiltiy를 확보할 수 있습니다.
+
+`required interfaces` 모듈이 정의하는 인터페이스를 사용해 Mock Object를 만들면 `submodlue_feature1` 모듈의 전체 기능을 테스트할 수 있습니다. 여전히 유닛 테스팅은 불가능 하지만 SW 시스템 전체에 대해 매뉴얼 테스트 밖에 할 수 없는 상황보다는 진일보한 것이라고 할 수 있습니다.
+
+이전 그림과 크게 달라진 부분은 없지만 `submoule_feature1` 모듈은 피처(feature) 수준의 테스트 코드를 확보해 독자적인 검증 과정을 거칠수 있게 됐습니다.
+
+- AndroidTVFrontend
+    - app (legacy code)
+        - main
+            - feature1_entry
+                - feature1_injector
+                - imps of required interfaces 
+        - feature2
+        - featureN
+    - features
+        - submodule_feature1
+            - required interfaces
+            - feature1
+            - ***test***
+
+동일한 방법을 다른 피처에도 적용하여 서브 모듈화를 진행할 수 있습니다. 그리고, 각 서브 모듈은 테스트 코드를 통해 자체적으로 검증할 수 있는 수단을 마련합니다. 그리고 이런 검증 수단을 기반으로 각 피처 모듈은 알아서 코드르 개선하던 검증을 좀 더 강화하기 위한 테스트 코드를 개발하던 알아서 개선을 진행하면 됩니다. 모든 것이 뭉쳐있던 이 전과는 다르게 피처간의 의존성은 전혀 없습니다. 
+
+서로 방이 다르니 방을 어지럽히던 깨끗하게 하던 방 주인이 알아서 하는 겁니다.
